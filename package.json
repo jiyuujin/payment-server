@@ -1,0 +1,29 @@
+{
+  "name": "payment-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "create": "sls create --template aws-nodejs",
+    "deploy": "sls deploy",
+    "deploy --test": "NODE_ENV=test sls deploy --stage test",
+    "deploy --live": "NODE_ENV=live sls deploy --stage live",
+    "lint": "eslint ./ --ext ts,vue",
+    "lint:fix": "eslint ./ --ext ts,vue --fix",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "10.0.0",
+    "stripe": "8.191.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "@types/node": "16.11.10",
+    "@types/stripe-checkout": "1.0.4",
+    "eslint": "8.3.0",
+    "eslint-config-prettier": "8.3.0",
+    "prettier": "2.4.1",
+    "ts-loader": "9.2.6",
+    "typescript": "4.5.2"
+  }
+}
