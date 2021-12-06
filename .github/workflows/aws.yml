@@ -1,9 +1,11 @@
 name: Deploy to Lambda
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '0 14 * * 0'
+  # push:
+  #   branches:
+  #     - main
   pull_request:
     branches:
       - main
